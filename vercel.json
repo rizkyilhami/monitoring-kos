@@ -5,15 +5,14 @@
       "runtime": "vercel-php@0.7.3"
     }
   },
-  "buildCommand": "composer install --no-interaction --prefer-dist && php artisan config:cache && php artisan route:cache && npm install && npm run build",
-  "outputDirectory": "public",
+  "buildCommand": "composer install --no-interaction --prefer-dist && npm install && npm run build",
   "routes": [
     {
       "src": "/build/(.*)",
       "dest": "/public/build/$1"
     },
     {
-      "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|txt|json|map|webp|woff2?|ttf|eot))",
+      "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|txt|json|map|webp|woff2?|ttf|eot))",
       "dest": "/public/$1"
     },
     {
