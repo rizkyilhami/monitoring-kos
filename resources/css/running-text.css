@@ -1,0 +1,473 @@
+/* ============================================
+   RUNNING TEXT ANIMATIONS - Smooth & Elegant
+   ============================================ */
+
+/* Base Running Text Class */
+.running-text {
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+/* ============================================
+   SLIDE IN FROM LEFT ANIMATIONS
+   ============================================ */
+
+/* Slide In - Text slides from left to right */
+.running-text-slide {
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide In - Slower version */
+.running-text-slide-slow {
+    animation: slideInFromLeft 1.2s ease-out forwards;
+}
+
+/* Slide In - Faster version */
+.running-text-slide-fast {
+    animation: slideInFromLeft 0.5s ease-out forwards;
+}
+
+/* ============================================
+   TYPEWRITER EFFECT - Character by Character
+   ============================================ */
+
+/* Typewriter - Classic typewriter effect */
+.running-text-typewriter {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid currentColor;
+    white-space: nowrap;
+    animation: typing 1.5s steps(40, end) forwards,
+              blink 0.7s step-start infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    0%, 49% {
+        border-right-color: currentColor;
+    }
+    50%, 100% {
+        border-right-color: transparent;
+    }
+}
+
+/* Typewriter - Slower */
+.running-text-typewriter-slow {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid currentColor;
+    white-space: nowrap;
+    animation: typing-slow 2.5s steps(40, end) forwards,
+              blink 0.7s step-start infinite;
+}
+
+@keyframes typing-slow {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Typewriter - Faster */
+.running-text-typewriter-fast {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 3px solid currentColor;
+    white-space: nowrap;
+    animation: typing-fast 0.8s steps(40, end) forwards,
+              blink 0.7s step-start infinite;
+}
+
+@keyframes typing-fast {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* ============================================
+   WORD BY WORD ANIMATION
+   ============================================ */
+
+/* Word Appear - Words appear one by one */
+.running-text-word {
+    animation: wordAppear 0.6s ease-out forwards;
+}
+
+@keyframes wordAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Word Appear - Slower */
+.running-text-word-slow {
+    animation: wordAppear 1s ease-out forwards;
+}
+
+/* Word Appear - Faster */
+.running-text-word-fast {
+    animation: wordAppear 0.4s ease-out forwards;
+}
+
+/* ============================================
+   FADE IN ANIMATIONS
+   ============================================ */
+
+/* Fade In - Simple fade with slide */
+.running-text-fade {
+    animation: fadeSlideIn 0.7s ease-out forwards;
+}
+
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade In - Slower */
+.running-text-fade-slow {
+    animation: fadeSlideIn 1.2s ease-out forwards;
+}
+
+/* Fade In - Faster */
+.running-text-fade-fast {
+    animation: fadeSlideIn 0.4s ease-out forwards;
+}
+
+/* ============================================
+   BOUNCE IN ANIMATIONS
+   ============================================ */
+
+/* Bounce In - Text bounces in from left */
+.running-text-bounce {
+    animation: bounceInFromLeft 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes bounceInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(10px);
+    }
+    80% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ============================================
+   CONTINUOUS RUNNING TEXT
+   ============================================ */
+
+/* Running Loop - Text continuously scrolls */
+.running-text-loop {
+    animation: runLoop 20s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@keyframes runLoop {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Running Loop - Slower */
+.running-text-loop-slow {
+    animation: runLoop-slow 30s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@keyframes runLoop-slow {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Running Loop - Faster */
+.running-text-loop-fast {
+    animation: runLoop-fast 10s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@keyframes runLoop-fast {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ============================================
+   WITH COLOR VARIATIONS
+   ============================================ */
+
+/* Running text with color */
+.running-text-purple {
+    color: #9333ea;
+}
+
+.running-text-blue {
+    color: #3b82f6;
+}
+
+.running-text-cyan {
+    color: #06b6d4;
+}
+
+.running-text-green {
+    color: #10b981;
+}
+
+.running-text-pink {
+    color: #ec4899;
+}
+
+.running-text-indigo {
+    color: #6366f1;
+}
+
+.running-text-orange {
+    color: #f97316;
+}
+
+.running-text-red {
+    color: #ef4444;
+}
+
+/* ============================================
+   DELAY VARIATIONS
+   ============================================ */
+
+/* For staggered animations on multiple elements */
+.running-text-delay-1 {
+    animation-delay: 0.1s;
+}
+
+.running-text-delay-2 {
+    animation-delay: 0.2s;
+}
+
+.running-text-delay-3 {
+    animation-delay: 0.3s;
+}
+
+.running-text-delay-4 {
+    animation-delay: 0.4s;
+}
+
+.running-text-delay-5 {
+    animation-delay: 0.5s;
+}
+
+/* ============================================
+   STYLE VARIATIONS
+   ============================================ */
+
+/* Text Size Variations */
+.running-text-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.running-text-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.running-text-body {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.running-text-small {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* ============================================
+   GRADIENT TEXT WITH RUNNING ANIMATION
+   ============================================ */
+
+/* Gradient + Running */
+.running-text-gradient {
+    background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: slideInFromLeft 0.8s ease-out forwards,
+              gradientShift 3s ease-in-out infinite;
+    animation-delay: 0s, 0.8s;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+}
+
+/* ============================================
+   COMBINED EFFECTS
+   ============================================ */
+
+/* Slide + Glow Subtle (no glow effect, just color) */
+.running-text-emphasis {
+    font-weight: 600;
+    animation: slideInFromLeft 0.8s ease-out forwards;
+}
+
+/* Uppercase Running Text */
+.running-text-uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ============================================
+   DARK MODE SUPPORT
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    .running-text-purple {
+        color: #c084fc;
+    }
+
+    .running-text-blue {
+        color: #60a5fa;
+    }
+
+    .running-text-cyan {
+        color: #22d3ee;
+    }
+
+    .running-text-green {
+        color: #34d399;
+    }
+
+    .running-text-pink {
+        color: #f472b6;
+    }
+
+    .running-text-indigo {
+        color: #a5b4fc;
+    }
+
+    .running-text-orange {
+        color: #fb923c;
+    }
+
+    .running-text-red {
+        color: #f87171;
+    }
+
+    .running-text-gradient {
+        background: linear-gradient(90deg, #a5b4fc, #c084fc, #a5b4fc);
+        background-size: 200% 100%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+/* ============================================
+   UTILITY COMBINATIONS
+   ============================================ */
+
+/* Hover effects */
+.running-text:hover {
+    animation-play-state: paused;
+}
+
+/* For loop animations, allow pause on hover */
+.running-text-loop:hover {
+    animation-play-state: paused;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+    .running-text-typewriter {
+        border-right: 2px solid currentColor;
+    }
+
+    .running-text {
+        font-weight: 600;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .running-text-slide,
+    .running-text-slide-slow,
+    .running-text-slide-fast,
+    .running-text-typewriter,
+    .running-text-typewriter-slow,
+    .running-text-typewriter-fast,
+    .running-text-word,
+    .running-text-word-slow,
+    .running-text-word-fast,
+    .running-text-fade,
+    .running-text-fade-slow,
+    .running-text-fade-fast,
+    .running-text-bounce,
+    .running-text-loop,
+    .running-text-loop-slow,
+    .running-text-loop-fast {
+        animation: none;
+    }
+}
